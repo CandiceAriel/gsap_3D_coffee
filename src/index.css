@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "Montserrat", sans-serif; 
+  --color-almond-cream: #ede0d4;
+  --color-desert-sand: #e6ccb2;
+  --color-tan: #ddb892;
+  --color-faded-copper: #b08968;
+  --color-coffee-bean: #7f5539;
+}
+
+
+body {
+  width: 100vw;
+  background-color: black;
+  margin: 0;
+}
+
+
+@layer utilities{
+  .flex-center{
+    @apply flex justify-center items-center;
+  }
+}
+
+@layer components{
+  .padding-x{
+    @apply px-5 md:px-10;
+  }
+
+  p{
+    @apply font-roboto text-base
+  }
+
+  #hero{
+    @apply bg-almond-cream
+  }
+}
