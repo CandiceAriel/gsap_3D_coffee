@@ -3,14 +3,14 @@ import { Canvas } from '@react-three/fiber'
 import { Environment, OrbitControls } from '@react-three/drei'
 
 import { CoffeeCupModel } from '../components/models/Coffee_cup'
-import { CaffeBerniniModel } from '../components/models/Caffe_bernini';
+import { CoffeePaperBagModel } from '../components/models/Coffee_paper_bag';
 
 const Hero = () => {
   return (
     <section id="hero" className="h-screen w-full">
       <Canvas
         shadows
-        camera={{ position: [0, 0, 15], fov: 45 }}
+        camera={{ position: [0, 0, 5], fov: 45 }}
         className="w-full h-[500px]" 
       >
         <ambientLight intensity={0.4} />
@@ -26,7 +26,7 @@ const Hero = () => {
         />
 
         <Suspense fallback={null}>
-          <CoffeeCupModel />
+          <CoffeePaperBagModel />
         </Suspense>
         <Environment preset="studio" />
       </Canvas>
