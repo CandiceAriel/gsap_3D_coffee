@@ -13,11 +13,10 @@ import { Center, useGLTF } from '@react-three/drei'
 export function CoffeePaperBagModel(props) {
   const { nodes, materials } = useGLTF('/models/coffee_paper_bag.glb')
   return (
-    <group {...props} dispose={null} scale={0.25}>
-      <Center>
-        <mesh geometry={nodes.Object_2.geometry} material={materials.set1} rotation={[-Math.PI / 2, 0, 0]} />
-      </Center>
-      
+    <group {...props} dispose={null} scale={0.4}>
+        <Center>
+          <mesh geometry={nodes.Object_2.geometry} material={materials.set1} rotation={[-Math.PI / 2, 0, 0]} />
+        </Center>
     </group>
   )
 }

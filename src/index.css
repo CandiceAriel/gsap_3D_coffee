@@ -34,6 +34,6 @@ body {
   }
 
   #hero{
-    @apply h-[100vh] w-full bg-almond-cream;
+    @apply w-full bg-almond-cream;
   }
 }
