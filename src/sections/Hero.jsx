@@ -1,21 +1,42 @@
-import React from 'react'
+import React,{ Suspense } from 'react';
+import { Canvas } from '@react-three/fiber'
+import { Environment, OrbitControls } from '@react-three/drei'
+
+import { CoffeeCupModel } from '../components/models/Coffee_cup'
+import { CaffeBerniniModel } from '../components/models/Caffe_bernini';
 
 const Hero = () => {
   return (
-    <section id="hero">
-      <div className='hero-layout'>
-        {/* LEFT CONTENT: 3D MODEL */}
+    <section id="hero" className="h-screen w-full">
+      <Canvas
+        shadows
+        camera={{ position: [0, 0, 15], fov: 45 }}
+        className="w-full h-[500px]" 
+      >
+        <ambientLight intensity={0.4} />
+        <directionalLight position={[5, 5, 5]} intensity={2} />
 
-        {/* RIGHT CONTENT: CONTENT */}
-        <header className='flex flex-col justify-center md:px-20 px-5'>
-          <div className='flex flex-col gap-7'>
-              <div className='hero-text'>
+        <OrbitControls 
+          enableZoom={false} 
+          enablePan={false} 
+          maxDistance={20}
+          minDistance={5}
+          minPolarAngle={Math.PI / 5} 
+          maxPolarAngle={Math.PI / 2} 
+        />
 
-              </div>
-          </div>
-        </header>
+        <Suspense fallback={null}>
+          <CoffeeCupModel />
+        </Suspense>
+        <Environment preset="studio" />
+      </Canvas>
+
+      <div style={{ position: 'relative', zIndex: 1 }}>
+        <h1>Text on top</h1>
       </div>
     </section>
+
+    
   )
 }
 

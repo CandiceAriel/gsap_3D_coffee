@@ -30,10 +30,10 @@ body {
   }
 
   p{
-    @apply font-roboto text-base
+    @apply font-roboto text-base;
   }
 
   #hero{
-    @apply bg-almond-cream
+    @apply h-[100vh] w-full bg-almond-cream;
   }
 }

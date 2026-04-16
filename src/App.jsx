@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <div className=' flex-center h-[100vh]'>
-        <h1 className='text-3xl text-coffee-bean'>Welcome to the shop!</h1>
+        <Hero />
       </div>
     </>
     
