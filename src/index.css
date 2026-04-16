@@ -34,6 +34,6 @@ body {
   }
 
   #hero{
-    @apply w-full bg-almond-cream;
+    @apply relative h-screen w-full overflow-hidden bg-almond-cream;
   }
 }
