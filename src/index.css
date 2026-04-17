@@ -3,7 +3,7 @@
 
 @theme {
   --font-roboto: "Montserrat", sans-serif; 
-  --color-almond-cream: #ede0d4;
+  --color-prussian-blue: #14213d;
   --color-desert-sand: #e6ccb2;
   --color-tan: #ddb892;
   --color-faded-copper: #b08968;
@@ -34,6 +34,6 @@ body {
   }
 
   #hero{
-    @apply relative h-screen w-full overflow-hidden bg-almond-cream;
+    @apply relative h-screen w-full overflow-hidden bg-prussian-blue;
   }
 }
